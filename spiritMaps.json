@@ -5,12 +5,13 @@
                 "defaultmap":1649228648,
                 "maps":[
                     {
-                        "mapFile":"/home/spirit/maps/1649228648.pbstream",
+                        "mapFile":"~/maps/1649228648.pbstream",
                         "initialId":null,
                         "mapId":1649228648,
+                        "mapName":"0406",
                         "shapeAreas":[
-			    {
-                                "shapeId":444,
+                            {
+                                "shapeId":111,
                                 "type":"lines",
                                 "closed":false,
                                 "lines":[
@@ -57,59 +58,6 @@
                                         "y":0
                                     }
                                 ]
-                            }
-                        ],
-                        "mapName":"0406",
-                        "chargeId":null,
-                        "points":[
-                            {
-                                "positionYaw":62.9699088953326,
-                                "positionX":-0.23933358034553276,
-                                "positionY":-7.730027219935255,
-                                "pointName":"装配",
-                                "pointId":1649228225
-                            },
-                            {
-                                "positionYaw":116.45828194822096,
-                                "positionX":6.573191416568266,
-                                "positionY":-5.229751120028258,
-                                "pointName":"宿舍",
-                                "pointId":1649228382
-                            },
-                            {
-                                "positionYaw":7.860928806108589,
-                                "positionX":6.905984175554186,
-                                "positionY":-0.22970297225756942,
-                                "pointName":"大门",
-                                "pointId":1649228409
-                            },
-                            {
-                                "positionYaw":80.22866886767282,
-                                "positionX":5.866218304437318,
-                                "positionY":4.437828000338051,
-                                "pointName":"楼梯",
-                                "pointId":1649228440
-                            },
-                            {
-                                "positionYaw":-179.40273088402895,
-                                "positionX":0.14252330710454897,
-                                "positionY":0.12145714838667715,
-                                "pointName":"研发",
-                                "pointId":1649228486
-                            },
-                            {
-                                "positionYaw":6.66423476895899,
-                                "positionX":-4.255408705027599,
-                                "positionY":0.01838791775835369,
-                                "pointName":"测试",
-                                "pointId":1649228510
-                            },
-                            {
-                                "positionYaw":3.5193657668016387,
-                                "positionX":-4.134478362968052,
-                                "positionY":-0.21108852259000677,
-                                "pointName":"测试1",
-                                "pointId":1649228623
                             }
                         ]
                     }

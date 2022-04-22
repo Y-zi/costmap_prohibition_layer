@@ -1,7 +1,8 @@
 # costmap_prohibition_layer
 
 #### 介绍
-基于costmap_prohibition_layer开源代码，修改的支持文件配置动态虚拟墙
+基于costmap_prohibition_layer [https://github.com/rst-tu-dortmund/costmap_prohibition_layer](https://github.com/rst-tu-dortmund/costmap_prohibition_layer) 
+开源代码，魔改的支持文件配置动态虚拟墙，支持虚拟墙动态刷新
 
 #### 软件架构
 软件架构说明
@@ -9,29 +10,26 @@
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  直接下载到你的工作空间上编译
+2.  设置你的mve_base params文件(如果不知道在哪，百度学move_base调参)
+3.  分别在global_costmap 和local_costmap 的文件中 plugins 下添加
+    ’- {name: costmap_prohibition_layer,        type: "costmap_prohibition_layer_namespace::CostmapProhibitionLayer"}‘
+4.  把spiritMaps.json文件放到主目录的map文件夹(如果没有就自己创建)下
 
-#### 使用说明
+#### 使用
+1.  配置json文件修改保存
+2.  rostopic 发布 /wall 参数任意 然后就动态更新了 
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### spiritMaps.json 说明
 
-#### 参与贡献
+参数|类型|说明
+--|:--:|--
+shapeAreas|[]|存储所有虚拟墙的集合
+shapeId|int64|虚拟墙id
+type|string|虚拟墙类型（目前只支持lines）
+closed|bool|是否闭合(首尾相接，组成形状，如：三角形，四边形等)
+lines.x|double|虚拟墙坐标点x
+lines.y|double|虚拟墙坐标点y
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+(由于该文件是从项目抽出，其他参数不做解析，大家用的时候，直接用文件默认就行)
 
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
