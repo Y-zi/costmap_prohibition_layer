@@ -49,8 +49,6 @@
 #include <ros/ros.h>
 #include <costmap_2d/layer.h>
 #include <costmap_2d/layered_costmap.h>
-#include <costmap_prohibition_layer/CostmapProhibitionLayerConfig.h>
-#include <dynamic_reconfigure/server.h>
 
 #include <unordered_map>
 
@@ -166,7 +164,6 @@ private:
     */
   bool parseProhibitionListFromJson();
 
-  dynamic_reconfigure::Server<CostmapProhibitionLayerConfig>* _dsrv;            //!< costmap 的动态重新配置服务器
   std::mutex _data_mutex;                                                       //!< 用于访问 _prohibition_points 和 _prohibition_polygons 的互斥锁
   double _costmap_resolution;                                                   //!< 覆盖costmap的分辨率以创建两点中最细的线
   //bool _fill_polygons;                                                          //!< 是否 多边形内部的所有单元格也被标记为障碍物
