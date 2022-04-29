@@ -155,10 +155,10 @@ void CostmapProhibitionLayer::updateCosts(costmap_2d::Costmap2D &master_grid, in
             int mx = polygon_cells[i].x;
             int my = polygon_cells[i].y;
             // check if point is outside bounds
-            // if (mx < min_i || mx >= max_i)
-            //     continue;
-            // if (my < min_j || my >= max_j)
-            //     continue;
+            if (mx < min_i || mx >= max_i)
+                continue;
+            if (my < min_j || my >= max_j)
+                continue;
             master_grid.setCost(mx, my, LETHAL_OBSTACLE);
         }
       }
